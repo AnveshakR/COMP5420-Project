@@ -24,6 +24,14 @@ underdog = 'Bengals'
 
 # key for fav: 0 means irrelevant fans, 1 means fan of underdog, 2 means fan of
 dfmerged['fav'] = 0
+# key for condition:
+# 1 is the fav team winning a close match
+# 2 is the fav team winning a one-sided match
+# 3 is the underdog team winning a close match
+# 4 is the underdog team winning a one-sided match
+
+dfmerged['condition'] = 1
+
 for ind in dfmerged.index:
     flair = str(dfmerged['flair'][ind])
     print(flair,type(flair),'flair')
@@ -36,4 +44,4 @@ for ind in dfmerged.index:
             print('underdog')
             dfmerged['fav'][ind] = 1
 
-dfmerged.to_csv('LVI_merged_v2.csv')
+dfmerged.to_csv('LVI_merged_Condition1.csv')

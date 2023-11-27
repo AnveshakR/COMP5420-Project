@@ -1,0 +1,32 @@
+Positive emotions:
+1)    Admiration
+2)    Amusement
+3)    Approval
+4)    Caring
+5)    Desire
+6)    Excitement
+7)    Gratitude
+8)    Joy
+9)    Love
+10) Optimism
+11) Pride
+12) Relief
+Negative emotions:
+1)    Anger
+2)    Annoyance
+3)    Disappointment
+4)    Disapproval
+5)    Disgust
+6)    Embarrassment
+7)    Fear
+8)    Grief
+9)    Nervousness
+10) Remorse
+11) Sadness
+ Ambiguous emotions:
+1)    Confusion
+2)    Curiosity
+3) 	  Realization
+4) 	  Surprise 
+
+
