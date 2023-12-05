@@ -17,6 +17,8 @@ input_data = pd.read_csv(input_csv_path, encoding='latin1')
 # Create list to store predicted emotions
 predicted_emotions = []
 
+count = 0
+
 # Perform emotion classification for each text 
 for text in input_data["text"]:
     inputs = tokenizer([str(text)], return_tensors="tf", max_length=512, truncation=True)
@@ -24,6 +26,10 @@ for text in input_data["text"]:
     logits = outputs.logits
     predicted_class = tf.argmax(logits, axis=1).numpy()[0]
     predicted_emotions.append(predicted_class)
+
+    count = count + 1
+    if ( count % 100 == 0): # Just here to check if it running properly
+        print(count)
 
 # Add the predicted emotions to the input_data DataFrame
 input_data["predicted_emotion"] = predicted_emotions
