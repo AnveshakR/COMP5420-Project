@@ -19,7 +19,7 @@ predicted_emotions = []
 
 # Perform emotion classification for each text 
 for text in input_data["text"]:
-    inputs = tokenizer(text, return_tensors="tf", max_length=512, truncation=True)
+    inputs = tokenizer([str(text)], return_tensors="tf", max_length=512, truncation=True)
     outputs = model(**inputs)
     logits = outputs.logits
     predicted_class = tf.argmax(logits, axis=1).numpy()[0]
