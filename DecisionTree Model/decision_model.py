@@ -11,8 +11,14 @@ df = pd.read_csv(file_path)
 # Create a new class "Unknown" and encode it as 2
 df['sport'] = df['sport'].map({'Football': 0, 'Soccer': 1, 'Unknown': 2})
 
+# Encode the category stuff
+df['category'] = df['category'].map({'1N': 0, '1F': 1, '1U': 2,
+                                     '2N': 3, '2F': 4, '2U': 5,
+                                     '3N': 6, '3F': 7, '3U': 8,
+                                     '4N': 9, '4F': 10, '4U': 11})
+
 # Define features and target
-features = ['phase', 'predicted_emotion', 'predicted_emotion_2nd']
+features = ['phase','category', 'predicted_emotion', 'predicted_emotion_2nd']
 target = 'sport'
 
 # Split the data into training and testing sets
