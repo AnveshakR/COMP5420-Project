@@ -1,1 +1,4 @@
+*Zone.Identifier
 *.pt
+.python-version
+.mypy_cache

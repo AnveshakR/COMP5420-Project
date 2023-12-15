@@ -1,0 +1,3 @@
+The model and its checkpoints can be found at the link below:
+
+https://huggingface.co/AnveshakR/Reddit-NFL-FineTuned-Model
